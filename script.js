@@ -171,7 +171,7 @@ btnFinalizarPedido.addEventListener("click", () => {
     msg += `\n\n*Endereço de Entrega:* ${inputEndereco.value}`;
 
     // Número fictício - Substitua pelo seu celular de atendimento (ex: 5511999999999)
-    const telefone = "5511999999999"; 
+    const telefone = "5511976794749"; 
     const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(msg)}`;
     
     // Limpa carrinho e redireciona
