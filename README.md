@@ -1,15 +1,25 @@
-# Pizzaria Delivery Premium
+Pizzaria Delivery Premium
 
-Landing page premium para pizzaria delivery desenvolvida com React + Vite.
+Landing page premium para pizzarias e delivery.
 
-## Tecnologias
+## 🚀 Recursos
 
-- React
-- Vite
+- Carrinho funcional
+- Pedido automático no WhatsApp
+- Layout responsivo
+- Visual premium
+- Animações modernas
+- HTML + CSS + JavaScript puro
+
+## 📦 Tecnologias
+
+- HTML5
 - CSS3
-- Framer Motion
+- JavaScript
 
-## Instalação
+## ▶️ Como executar
+
+Basta abrir o arquivo:
 
 ```bash
-npm install
+index.html
