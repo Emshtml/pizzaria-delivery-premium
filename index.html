@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
 
@@ -14,90 +15,189 @@
     <title>Pizzaria Premium - Delivery</title>
 
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- CONTEÚDO DO SITE -->
+    <!-- HEADER -->
+    <header class="bg-red-700 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
 
+            <div>
+                <h1 class="text-2xl font-bold text-white">
+                    🍕 Pizzaria Premium
+                </h1>
 
-    <!-- Copyright -->
+                <p class="text-sm text-red-100">
+                    Delivery rápido e sabor incomparável
+                </p>
+            </div>
+
+            <button id="cartBtn"
+                class="relative bg-black text-white px-4 py-2 rounded-xl hover:bg-zinc-900 transition">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span id="cart-count"
+                    class="absolute -top-2 -right-2 bg-yellow-400 text-black text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative h-[400px] flex items-center justify-center text-center overflow-hidden">
+
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1400&auto=format&fit=crop"
+            class="absolute inset-0 w-full h-full object-cover opacity-40">
+
+        <div class="relative z-10 px-4">
+
+            <h2 class="text-5xl font-black text-white mb-4">
+                A Melhor Pizza da Cidade
+            </h2>
+
+            <p class="text-lg text-zinc-200 mb-6">
+                Peça agora com entrega rápida e segura.
+            </p>
+
+            <a href="#cardapio"
+                class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl text-lg font-bold transition inline-block">
+
+                Ver Cardápio
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="max-w-7xl mx-auto px-4 py-16">
+
+        <div class="text-center mb-12">
+
+            <h2 class="text-4xl font-black mb-2">
+                Nosso Cardápio
+            </h2>
+
+            <p class="text-zinc-400">
+                Escolha sua pizza favorita
+            </p>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- ITEM -->
+            <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl hover:scale-105 transition">
+
+                <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=1200&auto=format&fit=crop"
+                    class="w-full h-52 object-cover">
+
+                <div class="p-5">
+
+                    <h3 class="text-2xl font-bold mb-2">
+                        Calabresa Premium
+                    </h3>
+
+                    <p class="text-zinc-400 text-sm mb-4">
+                        Mussarela, calabresa artesanal, cebola roxa e orégano.
+                    </p>
+
+                    <div class="flex items-center justify-between">
+
+                        <span class="text-2xl font-black text-yellow-400">
+                            R$ 49,90
+                        </span>
+
+                        <button class="add-cart bg-red-600 hover:bg-red-700 px-4 py-2 rounded-xl text-white"
+                            data-name="Calabresa Premium"
+                            data-price="49.90">
+
+                            Adicionar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CARRINHO -->
+    <section class="max-w-4xl mx-auto px-4 pb-20">
+
+        <div class="bg-zinc-900 rounded-3xl p-8 shadow-2xl">
+
+            <div class="flex items-center justify-between mb-6">
+
+                <h2 class="text-3xl font-black">
+                    Seu Pedido
+                </h2>
+
+                <button id="clear-cart"
+                    class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-xl text-white">
+
+                    Esvaziar
+
+                </button>
+
+            </div>
+
+            <div id="cart-items" class="space-y-4 text-zinc-300">
+
+                <p>
+                    Seu carrinho está vazio.
+                </p>
+
+            </div>
+
+            <div class="border-t border-zinc-700 mt-6 pt-6 flex items-center justify-between">
+
+                <span class="text-2xl font-black">
+                    Total:
+                </span>
+
+                <span id="cart-total" class="text-3xl font-black text-yellow-400">
+                    R$ 0,00
+                </span>
+
+            </div>
+
+            <button id="finish-order"
+                class="w-full mt-8 bg-green-600 hover:bg-green-700 py-4 rounded-2xl text-xl font-black transition text-white">
+
+                Finalizar Pedido
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- COPYRIGHT -->
     <footer class="copyright">
         Copyright (c) 2026 Thereza Candida / Emshtml
     </footer>
 
-</body>
-</html>
-
-
-    <!-- Header / Banner -->
-    <header class="w-full h-[400px] bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000');">
-        <div class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center p-4">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Pizzaria Premium</h1>
-            <p class="text-amber-400 font-medium text-lg mb-4">O verdadeiro sabor da Itália na sua casa</p>
-            <div class="bg-green-500 text-white px-4 py-1.5 rounded-lg text-sm font-semibold shadow-lg" id="status-loja">
-                <i class="fa-solid fa-clock mr-1"></i> Aberto - Ter à Dom: 18h às 23h
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 py-8">
-        <h2 class="text-3xl font-bold text-center mb-8 text-gray-900">Nosso Cardápio</h2>
-        
-        <!-- Grid de Produtos -->
-        <div id="cardapio" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Os produtos serão injetados aqui via script.js -->
-        </div>
-    </main>
-
-    <!-- Footer / Barra do Carrinho Fixa (Mobile) -->
-    <footer class="fixed bottom-0 left-0 w-full bg-red-600 text-white p-4 flex justify-between items-center z-40 shadow-2xl md:px-12">
-        <button id="btn-ver-carrinho" class="flex items-center gap-2 font-bold text-lg hover:text-amber-300 transition-all">
-            <i class="fa-solid fa-cart-shopping"></i>
-            Ver Carrinho (<span id="contador-carrinho">0</span>)
-        </button>
-        <div class="font-bold text-xl">
-            Total: <span id="total-barra">R$ 0,00</span>
-        </div>
-    </footer>
-
-    <!-- Modal do Carrinho -->
-    <div id="modal-carrinho" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
-        <div class="bg-white rounded-2xl w-full max-w-lg p-6 max-h-[85vh] flex flex-col shadow-2xl animate-fade-in">
-            <div class="flex justify-between items-center border-b pb-3 mb-4">
-                <h3 class="text-xl font-bold text-gray-900"><i class="fa-solid fa-cart-shopping text-red-600 mr-2"></i>Seu Carrinho</h3>
-                <button id="btn-fechar-modal" class="text-gray-400 hover:text-gray-600 text-2xl"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-
-            <!-- Itens do Carrinho -->
-            <div id="itens-carrinho" class="flex-1 overflow-y-auto space-y-4 pr-1 mb-4">
-                <!-- Injetado via JS -->
-            </div>
-
-            <!-- Total -->
-            <div class="border-t pt-3 space-y-3">
-                <div class="flex justify-between text-lg font-bold text-gray-900">
-                    <span>Total:</span>
-                    <span id="total-modal">R$ 0,00</span>
-                </div>
-
-                <!-- Endereço de Entrega -->
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Endereço de Entrega:</label>
-                    <input type="text" id="input-endereco" placeholder="Rua, Número, Bairro..." class="w-full border rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
-                    <p id="aviso-endereco" class="text-red-500 text-xs mt-1 hidden">* Por favor, informe o endereço.</p>
-                </div>
-
-                <!-- Botão Enviar WhatsApp -->
-                <button id="btn-finalizar-pedido" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-xl"></i> Finalizar Pedido via WhatsApp
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
+    <!-- SCRIPT -->
     <script src="script.js"></script>
+
 </body>
+
 </html>
