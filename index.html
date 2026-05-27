@@ -11,17 +11,47 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body><header class="header">
+    <div class="container nav">
+      <h1 class="logo">Pizza<span>Prime</span></h1>
 
-  <section class="delivery" id="delivery">
-    <div class="container delivery-box">
+      <nav>
+        <a href="#menu">Cardápio</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <button class="cart-btn" id="openCart">
+        🛒 <span id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
       <div>
-        <h2>Delivery rápido</h2>
+        <h2>Pizza artesanal premium na sua casa</h2>
         <p>
-          Entregamos em toda a região com rapidez e qualidade.
+          Ingredientes selecionados, massa italiana e entrega rápida.
         </p>
+
+        <a href="#menu" class="btn-primary">
+          Ver Cardápio
+        </a>
       </div>
 
-      <div class="delivery-info">
+      <img
+        src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop"
+        alt="Pizza Premium"
+      />
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nosso Cardápio</h2>
+        <p>As pizzas mais pedidas da cidade</p>
+      </div><div class="delivery-info">
         <div>
           <strong>⏰ Tempo médio</strong>
           <span>30-45 min</span>
@@ -38,12 +68,12 @@
   <footer id="contato">
     <div class="container footer-content">
       <div>
-        <h3>PizzaPrime</h3>
+        <h3>Pizzaria Premium Delivery </h3>
         <p>Experiência premium em delivery.</p>
       </div>
 
       <div>
-        <p>📞 (11) 99999-9999</p>
+        <p>📞 (11) 976794749</p>
         <p>📍 São Paulo - SP</p>
       </div>
     </div>
@@ -71,3 +101,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
