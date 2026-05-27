@@ -1,203 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizzaria Delivery Premium</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Copyright -->
-    <meta name="copyright" content="Copyright (c) 2026 Thereza Candida / Emshtml">
-
-    <!-- Autor -->
-    <meta name="author" content="Thereza Candida / Emshtml">
-
-    <title>Pizzaria Premium - Delivery</title>
-
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<body><header class="header">
 
-<body>
+  <section class="delivery" id="delivery">
+    <div class="container delivery-box">
+      <div>
+        <h2>Delivery rápido</h2>
+        <p>
+          Entregamos em toda a região com rapidez e qualidade.
+        </p>
+      </div>
 
-    <!-- HEADER -->
-    <header class="bg-red-700 shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
-
-            <div>
-                <h1 class="text-2xl font-bold text-white">
-                    🍕 Pizzaria Premium
-                </h1>
-
-                <p class="text-sm text-red-100">
-                    Delivery rápido e sabor incomparável
-                </p>
-            </div>
-
-            <button id="cartBtn"
-                class="relative bg-black text-white px-4 py-2 rounded-xl hover:bg-zinc-900 transition">
-
-                <i class="fa-solid fa-cart-shopping"></i>
-
-                <span id="cart-count"
-                    class="absolute -top-2 -right-2 bg-yellow-400 text-black text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                    0
-                </span>
-
-            </button>
-
-        </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="relative h-[400px] flex items-center justify-center text-center overflow-hidden">
-
-        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1400&auto=format&fit=crop"
-            class="absolute inset-0 w-full h-full object-cover opacity-40">
-
-        <div class="relative z-10 px-4">
-
-            <h2 class="text-5xl font-black text-white mb-4">
-                A Melhor Pizza da Cidade
-            </h2>
-
-            <p class="text-lg text-zinc-200 mb-6">
-                Peça agora com entrega rápida e segura.
-            </p>
-
-            <a href="#cardapio"
-                class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl text-lg font-bold transition inline-block">
-
-                Ver Cardápio
-
-            </a>
-
+      <div class="delivery-info">
+        <div>
+          <strong>⏰ Tempo médio</strong>
+          <span>30-45 min</span>
         </div>
 
-    </section>
-
-    <!-- CARDÁPIO -->
-    <section id="cardapio" class="max-w-7xl mx-auto px-4 py-16">
-
-        <div class="text-center mb-12">
-
-            <h2 class="text-4xl font-black mb-2">
-                Nosso Cardápio
-            </h2>
-
-            <p class="text-zinc-400">
-                Escolha sua pizza favorita
-            </p>
-
+        <div>
+          <strong>📍 Atendimento</strong>
+          <span>São Paulo - SP</span>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <footer id="contato">
+    <div class="container footer-content">
+      <div>
+        <h3>PizzaPrime</h3>
+        <p>Experiência premium em delivery.</p>
+      </div>
 
-            <!-- ITEM -->
-            <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl hover:scale-105 transition">
+      <div>
+        <p>📞 (11) 99999-9999</p>
+        <p>📍 São Paulo - SP</p>
+      </div>
+    </div>
+  </footer>
 
-                <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=1200&auto=format&fit=crop"
-                    class="w-full h-52 object-cover">
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h2>Seu Pedido</h2>
+        <button id="closeCart">✖</button>
+      </div>
 
-                <div class="p-5">
+      <div id="cartItems"></div>
 
-                    <h3 class="text-2xl font-bold mb-2">
-                        Calabresa Premium
-                    </h3>
+      <div class="cart-footer">
+        <h3>Total: R$ <span id="cartTotal">0.00</span></h3>
 
-                    <p class="text-zinc-400 text-sm mb-4">
-                        Mussarela, calabresa artesanal, cebola roxa e orégano.
-                    </p>
+        <button class="btn-whatsapp" id="finishOrder">
+          Finalizar Pedido
+        </button>
+      </div>
+    </div>
+  </div>
 
-                    <div class="flex items-center justify-between">
-
-                        <span class="text-2xl font-black text-yellow-400">
-                            R$ 49,90
-                        </span>
-
-                        <button class="add-cart bg-red-600 hover:bg-red-700 px-4 py-2 rounded-xl text-white"
-                            data-name="Calabresa Premium"
-                            data-price="49.90">
-
-                            Adicionar
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CARRINHO -->
-    <section class="max-w-4xl mx-auto px-4 pb-20">
-
-        <div class="bg-zinc-900 rounded-3xl p-8 shadow-2xl">
-
-            <div class="flex items-center justify-between mb-6">
-
-                <h2 class="text-3xl font-black">
-                    Seu Pedido
-                </h2>
-
-                <button id="clear-cart"
-                    class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-xl text-white">
-
-                    Esvaziar
-
-                </button>
-
-            </div>
-
-            <div id="cart-items" class="space-y-4 text-zinc-300">
-
-                <p>
-                    Seu carrinho está vazio.
-                </p>
-
-            </div>
-
-            <div class="border-t border-zinc-700 mt-6 pt-6 flex items-center justify-between">
-
-                <span class="text-2xl font-black">
-                    Total:
-                </span>
-
-                <span id="cart-total" class="text-3xl font-black text-yellow-400">
-                    R$ 0,00
-                </span>
-
-            </div>
-
-            <button id="finish-order"
-                class="w-full mt-8 bg-green-600 hover:bg-green-700 py-4 rounded-2xl text-xl font-black transition text-white">
-
-                Finalizar Pedido
-
-            </button>
-
-        </div>
-
-    </section>
-
-    <!-- COPYRIGHT -->
-    <footer class="copyright">
-        Copyright (c) 2026 Thereza Candida / Emshtml
-    </footer>
-
-    <!-- SCRIPT -->
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
