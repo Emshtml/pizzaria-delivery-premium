@@ -3,7 +3,7 @@
 <html class="dark" lang="pt-BR"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PIZZA NOCTURNA - Carrinho</title>
+<title>Checkout Final Profissional</title>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -124,7 +124,26 @@
     body {
       min-height: max(884px, 100dvh);
     }
-  </style>
+  
+        /* Custom scrollbar and animations from DOCUMENT_15 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.2s ease-out forwards;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #5c4037;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        </style>
 </head>
 <body class="font-body-md text-body-md overflow-x-hidden pb-32">
 <!-- TopAppBar -->
@@ -138,7 +157,7 @@
 <button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform" data-icon="shopping_cart">shopping_cart</button>
 </div>
 </header>
-<main class="mt-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<main class="mt-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter animate-fade-in">
 <!-- Left Column: Items & Totals -->
 <section class="lg:col-span-7 flex flex-col gap-6">
 <h2 class="font-headline-md text-headline-md text-on-surface">Seu Pedido</h2>
@@ -216,27 +235,27 @@
 <form class="flex flex-col gap-5">
 <div class="space-y-1.5">
 <label class="font-label-caps text-[10px] text-outline uppercase">Rua / Logradouro</label>
-<input class="w-full bg-surface-container border border-outline-variant/30 rounded-lg p-3 text-on-surface placeholder:text-on-surface-variant/40 outline-none input-glow transition-all" placeholder="Ex: Av. Paulista" type="text"/>
+<input class="w-full bg-surface-container border border-outline-variant/30 rounded-lg p-3 text-on-surface placeholder:text-on-surface-variant/40 outline-none input-glow transition-all border-outline-variant/20" placeholder="Ex: Av. Paulista" type="text"/>
 </div>
 <div class="grid grid-cols-3 gap-4">
 <div class="space-y-1.5 col-span-1">
 <label class="font-label-caps text-[10px] text-outline uppercase">Número</label>
-<input class="w-full bg-surface-container border border-outline-variant/30 rounded-lg p-3 text-on-surface placeholder:text-on-surface-variant/40 outline-none input-glow transition-all" placeholder="123" type="text"/>
+<input class="w-full bg-surface-container border border-outline-variant/30 rounded-lg p-3 text-on-surface placeholder:text-on-surface-variant/40 outline-none input-glow transition-all border-outline-variant/20" placeholder="123" type="text"/>
 </div>
 <div class="space-y-1.5 col-span-2">
 <label class="font-label-caps text-[10px] text-outline uppercase">Bairro</label>
-<input class="w-full bg-surface-container border border-outline-variant/30 rounded-lg p-3 text-on-surface placeholder:text-on-surface-variant/40 outline-none input-glow transition-all" placeholder="Centro" type="text"/>
+<input class="w-full bg-surface-container border border-outline-variant/30 rounded-lg p-3 text-on-surface placeholder:text-on-surface-variant/40 outline-none input-glow transition-all border-outline-variant/20" placeholder="Centro" type="text"/>
 </div>
 </div>
 <div class="space-y-1.5">
 <label class="font-label-caps text-[10px] text-outline uppercase">Ponto de Referência</label>
-<input class="w-full bg-surface-container border border-outline-variant/30 rounded-lg p-3 text-on-surface placeholder:text-on-surface-variant/40 outline-none input-glow transition-all" placeholder="Próximo ao mercado..." type="text"/>
+<input class="w-full bg-surface-container border border-outline-variant/30 rounded-lg p-3 text-on-surface placeholder:text-on-surface-variant/40 outline-none input-glow transition-all border-outline-variant/20" placeholder="Próximo ao mercado..." type="text"/>
 </div><div class="space-y-1.5">
 <label class="font-label-caps text-[10px] text-outline uppercase">Observações</label>
-<textarea class="w-full bg-surface-container border border-outline-variant/30 rounded-lg p-3 text-on-surface placeholder:text-on-surface-variant/40 outline-none input-glow transition-all min-h-[100px]" placeholder="Ex: Sem cebola, campainha com defeito..."></textarea>
+<textarea class="w-full bg-surface-container border border-outline-variant/30 rounded-lg p-3 text-on-surface placeholder:text-on-surface-variant/40 outline-none input-glow transition-all min-h-[100px] border-outline-variant/20 mt-1" placeholder="Ex: Sem cebola, campainha com defeito..."></textarea>
 </div>
 <div class="mt-4">
-<button class="w-full bg-primary-container text-on-primary-fixed-variant font-bold py-4 px-6 rounded-full flex items-center justify-center gap-3 glow-button hover:opacity-90 active:scale-95 transition-all" type="button">
+<button class="w-full bg-primary-container text-on-primary-fixed-variant font-bold py-4 px-6 rounded-full flex items-center justify-center gap-3 glow-button hover:opacity-90 active:scale-95 transition-all shadow-lg" type="button">
 <span class="material-symbols-outlined" data-icon="chat">chat</span>
 <span class="font-headline-md text-body-lg">Finalizar Pedido via WhatsApp</span>
 </button>
