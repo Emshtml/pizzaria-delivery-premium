@@ -7,7 +7,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Tailwind Configuration -->
 <script id="tailwind-config">
       tailwind.config = {
@@ -107,10 +106,11 @@
             background-color: #0A0A0A;
             color: #e1e3e4;
             overflow-x: hidden;
+            min-height: max(884px, 100dvh);
         }
         .glass-panel {
             backdrop-filter: blur(20px);
-            background: rgba(10, 10, 10, 0.8);
+            background: rgba(10, 10, 10, 0.9);
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -122,18 +122,16 @@
         ::-webkit-scrollbar-track { background: #0A0A0A; }
         ::-webkit-scrollbar-thumb { background: #323536; border-radius: 10px; }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
+</head>
 <body class="font-body-md">
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 border-b border-white/5 backdrop-blur-xl bg-surface/80 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 transition-all duration-300">
 <div class="flex items-center gap-4">
-<button class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform" data-icon="menu">menu</button>
-<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary tracking-tighter uppercase">PIZZA ARTIGIANALE</h1>
+<button class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform">menu</button>
+<div class="flex flex-col">
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary tracking-tighter uppercase leading-none">PIZZA ARTIGIANALE</h1>
+<span class="text-[10px] text-tertiary-container font-mono opacity-50">index.html</span>
+</div>
 </div>
 <div class="flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full border border-primary/20">
 <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -143,19 +141,19 @@
 <main class="pt-16 pb-32">
 <!-- Hero Section -->
 <section class="relative h-[618px] w-full overflow-hidden mb-stack-lg">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] hover:scale-110" data-alt="A cinematic, high-angle close-up of a rustic sourdough pizza being pulled out of a traditional wood-fired stone oven. The lighting is moody and nocturnal, with warm orange glows from the embers illuminating the bubbling buffalo mozzarella and fresh basil leaves. The visual style is premium and artisanal, featuring deep blacks and rich shadows with vibrant red pops from the tomato sauce, aligning with a sophisticated Italian bistro aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADNeVTGl22pVIGLgJrbtRUQ10TfoQiOaChLPNQckZgLkv7jL2PLUPr6jwt9DwsnVRRqRWt8D0u5VFgGJbGdtTO1vK8_czdlFvakKmwK3xQjRQrDXXjnouifMTaZ8LMV-OicaRU2bQUEEI1eRLPLEJ777AbQkoc6p4Ktrbp7d939jC_SNDp3gDHI5d3QFy4uV68Sct7O7orf0zy4MEM8s9FvEj8fbul-_4nnNGGVh1_apHyLg__GXNHnHEHsiFZ2MYwPcDlPR3nNxs')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADNeVTGl22pVIGLgJrbtRUQ10TfoQiOaChLPNQckZgLkv7jL2PLUPr6jwt9DwsnVRRqRWt8D0u5VFgGJbGdtTO1vK8_czdlFvakKmwK3xQjRQrDXXjnouifMTaZ8LMV-OicaRU2bQUEEI1eRLPLEJ777AbQkoc6p4Ktrbp7d939jC_SNDp3gDHI5d3QFy4uV68Sct7O7orf0zy4MEM8s9FvEj8fbul-_4nnNGGVh1_apHyLg__GXNHnHEHsiFZ2MYwPcDlPR3nNxs')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
 <div class="absolute inset-0 flex flex-col justify-end px-margin-mobile md:px-margin-desktop pb-stack-lg max-w-container-max mx-auto">
 <span class="text-secondary font-label-md tracking-widest mb-2 uppercase">Lentamente Fermentada • 48 Horas</span>
 <h2 class="font-headline-xl text-headline-xl text-white mb-4">A Arte da Pizza<br/><span class="text-primary italic">Napoletana.</span></h2>
 <p class="font-body-lg text-body-lg text-tertiary-container max-w-xl mb-stack-md">Ingredientes selecionados diretamente da Itália, técnica ancestral e paixão por cada detalhe do processo artesanal.</p>
 <div class="flex gap-4">
-<button class="bg-primary text-white font-label-md px-8 py-4 rounded-lg uppercase tracking-wider hover:opacity-90 transition-all active:scale-95">Ver Cardápio</button>
+<button class="bg-primary text-white font-label-md px-8 py-4 rounded-lg uppercase tracking-wider hover:opacity-90 transition-all active:scale-95" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Ver Cardápio</button>
 </div>
 </div>
 </section>
 <!-- Menu Grid -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="menu">
 <div class="flex justify-between items-end mb-stack-lg border-l-4 border-primary pl-6">
 <div>
 <h3 class="font-headline-lg text-headline-lg text-white">Nossas Criações</h3>
@@ -172,7 +170,7 @@
 <!-- Pizza Item 1 -->
 <div class="pizza-card group bg-surface-container rounded-xl overflow-hidden border border-white/5 hover:border-primary/20 transition-all duration-500 shadow-2xl">
 <div class="h-64 overflow-hidden relative">
-<div class="pizza-image absolute inset-0 bg-cover bg-center transition-transform duration-700" data-alt="A top-down view of a classic Margherita pizza on a dark slate background. The pizza has a perfectly charred, airy crust, vibrant red San Marzano tomato sauce, fresh creamy buffalo mozzarella slices, and glossy green basil leaves. The lighting is sophisticated and atmospheric, emphasizing textures through dramatic shadows and highlights, consistent with a high-end nocturnal dining vibe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyuM_AsG04oAwoAYdYv7_TKLEV4DK4E6HIEzuDpxi6-Jca0H8Z4t86YUELHQLdBBiVYYW5yEN81ZAhyz5sMCWBxU-Tu0_wK1uJ5Zy4dQzDsaupiYFCsJDxIs18cSQeEbUJQYJ2NNfp1t4VHBXGqD9Z0eVXTb_7UEvjfS1iw7Q7cTnrv3DCstXqdrcD8DY0veyap0Zb_BapnMzSeJAKYaIO-HxU5sZ20tTaVu-phQqadT9ofoVyWJP80pgywTu5S0HXdFSHwLUlhlQ')"></div>
+<div class="pizza-image absolute inset-0 bg-cover bg-center transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyuM_AsG04oAwoAYdYv7_TKLEV4DK4E6HIEzuDpxi6-Jca0H8Z4t86YUELHQLdBBiVYYW5yEN81ZAhyz5sMCWBxU-Tu0_wK1uJ5Zy4dQzDsaupiYFCsJDxIs18cSQeEbUJQYJ2NNfp1t4VHBXGqD9Z0eVXTb_7UEvjfS1iw7Q7cTnrv3DCstXqdrcD8DY0veyap0Zb_BapnMzSeJAKYaIO-HxU5sZ20tTaVu-phQqadT9ofoVyWJP80pgywTu5S0HXdFSHwLUlhlQ')"></div>
 <div class="absolute top-4 right-4 bg-primary text-white font-label-sm px-3 py-1 rounded-full">MAIS PEDIDA</div>
 </div>
 <div class="p-6">
@@ -183,14 +181,14 @@
 <p class="text-on-surface-variant text-body-md mb-6 leading-relaxed">Tomate San Marzano, mozzarella di bufala artesanal, basílico fresco e azeite extravirgem.</p>
 <button class="w-full py-3 bg-surface-variant hover:bg-primary hover:text-white text-primary font-label-md transition-all flex justify-center items-center gap-2 group-hover:bg-primary group-hover:text-white" onclick="addToCart('Margherita D.O.C.', 58)">
 <span class="material-symbols-outlined">add_shopping_cart</span>
-                            ADICIONAR
-                        </button>
+                        ADICIONAR
+                    </button>
 </div>
 </div>
 <!-- Pizza Item 2 -->
 <div class="pizza-card group bg-surface-container rounded-xl overflow-hidden border border-white/5 hover:border-primary/20 transition-all duration-500 shadow-2xl">
 <div class="h-64 overflow-hidden relative">
-<div class="pizza-image absolute inset-0 bg-cover bg-center transition-transform duration-700" data-alt="A close-up shot of a Diavola pizza featuring spicy artisanal salami and nduja. The crust is spotted with 'leopard' char marks. Thin slices of bright red peppers and dollops of fresh cheese create a visually rich palette of reds, creams, and dark browns. Set against a dark, moody wooden background with subtle golden highlights from an overhead artisanal lamp." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAyyjF4gj2aHOQoozt3okOnKNxMqD56Jj5RnKlwCvFro-mnuDVff-NAlCUbPRgITyNcZqGybohLLYfwyPTbg9jjAJikxKbKQlqZCk_gqP4TCe-3tVtf7qeGuze1l3uHjXyd7iZGcZBp60NT-B7eqTWDB2TZuLvlC-HWK30pzvvbDKqBsDZklrM1jjCpSHNcyXGtv2D5iNyxi_bWx9vHwzKn_pWUChQNI1eZrefQEUkKbfGImgVFd9IWhFWBlrY1AmpZsJUj0isFoU')"></div>
+<div class="pizza-image absolute inset-0 bg-cover bg-center transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAyyjF4gj2aHOQoozt3okOnKNxMqD56Jj5RnKlwCvFro-mnuDVff-NAlCUbPRgITyNcZqGybohLLYfwyPTbg9jjAJikxKbKQlqZCk_gqP4TCe-3tVtf7qeGuze1l3uHjXyd7iZGcZBp60NT-B7eqTWDB2TZuLvlC-HWK30pzvvbDKqBsDZklrM1jjCpSHNcyXGtv2D5iNyxi_bWx9vHwzKn_pWUChQNI1eZrefQEUkKbfGImgVFd9IWhFWBlrY1AmpZsJUj0isFoU')"></div>
 </div>
 <div class="p-6">
 <div class="flex justify-between items-start mb-2">
@@ -200,14 +198,14 @@
 <p class="text-on-surface-variant text-body-md mb-6 leading-relaxed">Salami picante, 'nduja calabresa artesanal, mel trufado e mozzarella fior di latte.</p>
 <button class="w-full py-3 bg-surface-variant hover:bg-primary hover:text-white text-primary font-label-md transition-all flex justify-center items-center gap-2 group-hover:bg-primary group-hover:text-white" onclick="addToCart('Diavola Moderna', 64)">
 <span class="material-symbols-outlined">add_shopping_cart</span>
-                            ADICIONAR
-                        </button>
+                        ADICIONAR
+                    </button>
 </div>
 </div>
 <!-- Pizza Item 3 -->
 <div class="pizza-card group bg-surface-container rounded-xl overflow-hidden border border-white/5 hover:border-primary/20 transition-all duration-500 shadow-2xl">
 <div class="h-64 overflow-hidden relative">
-<div class="pizza-image absolute inset-0 bg-cover bg-center transition-transform duration-700" data-alt="A luxurious pizza topped with earthy black truffle carpaccio, wild forest mushrooms, and creamy white sauce. The pizza sits on a dark ceramic plate in a dimly lit, high-end bistro environment. The styling is minimalist but opulent, with neutral tones of beige, cream, and deep charcoal, highlighted by a subtle golden rim on the plate." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8Py4lh-dqu5Vaq7hOTe6JxpBpQfrf_NIjpAPhkZrCciGtEbhaJXryBB-Tb7XxR0uqRDxbGW51YjUyybVKUID2UqQ-tGbOKwW6cMXF5wTvs1U3rEJL-bvsGWUCxAM4AlfeSSRaT3uu3TXeC9phHHCDwn-iWVvzuNvnWkG-B5s1abBkRi67OVT__lKjjpS5aiIyPgzbbcxABqdKo9P_68bWBJe1VEDKFFtlO1DOr2ApukpCq7efiplvN86TTUAziJwi65pMx1UqwrA')"></div>
+<div class="pizza-image absolute inset-0 bg-cover bg-center transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8Py4lh-dqu5Vaq7hOTe6JxpBpQfrf_NIjpAPhkZrCciGtEbhaJXryBB-Tb7XxR0uqRDxbGW51YjUyybVKUID2UqQ-tGbOKwW6cMXF5wTvs1U3rEJL-bvsGWUCxAM4AlfeSSRaT3uu3TXeC9phHHCDwn-iWVvzuNvnWkG-B5s1abBkRi67OVT__lKjjpS5aiIyPgzbbcxABqdKo9P_68bWBJe1VEDKFFtlO1DOr2ApukpCq7efiplvN86TTUAziJwi65pMx1UqwrA')"></div>
 <div class="absolute top-4 left-4 bg-secondary text-on-secondary font-label-sm px-3 py-1 rounded-full">PREMIUM</div>
 </div>
 <div class="p-6">
@@ -218,49 +216,65 @@
 <p class="text-on-surface-variant text-body-md mb-6 leading-relaxed">Creme de trufas brancas, mix de cogumelos silvestres, taleggio e óleo de trufa negra.</p>
 <button class="w-full py-3 bg-surface-variant hover:bg-primary hover:text-white text-primary font-label-md transition-all flex justify-center items-center gap-2 group-hover:bg-primary group-hover:text-white" onclick="addToCart('Tartufo Bianco', 82)">
 <span class="material-symbols-outlined">add_shopping_cart</span>
-                            ADICIONAR
-                        </button>
+                        ADICIONAR
+                    </button>
 </div>
 </div>
 </div>
 </section>
 </main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-white/5 py-12 px-margin-mobile md:px-margin-desktop text-center">
+<p class="text-tertiary-container font-label-md uppercase tracking-[0.2em] mb-4">A Experiência Autêntica</p>
+<div class="inline-block px-3 py-1 border border-white/10 rounded font-mono text-[10px] text-on-surface-variant">SOURCE: index.html</div>
+</footer>
 <!-- Floating Cart Button -->
-<div class="fixed bottom-8 right-8 z-40">
+<div class="fixed bottom-24 md:bottom-8 right-8 z-40">
 <button class="relative bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-105 active:scale-95 transition-all" onclick="toggleCart()">
 <span class="material-symbols-outlined text-3xl">shopping_cart</span>
-<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary-container text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-surface" id="cart-count">0</span>
+<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary-container text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-surface scale-0 transition-transform duration-300" id="cart-count-badge">0</span>
 </button>
 </div>
 <!-- Cart Modal / Drawer -->
 <div class="fixed inset-0 z-[60] invisible opacity-0 transition-all duration-300 pointer-events-none" id="cart-modal">
-<div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="toggleCart()"></div>
-<div class="absolute right-0 top-0 h-full w-full md:w-96 glass-panel translate-x-full transition-transform duration-500 flex flex-col" id="cart-drawer">
-<div class="p-6 border-b border-white/10 flex justify-between items-center">
+<div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="toggleCart()"></div>
+<div class="absolute right-0 top-0 h-full w-full md:w-[450px] glass-panel translate-x-full transition-transform duration-500 flex flex-col shadow-2xl" id="cart-drawer">
+<div class="p-6 border-b border-white/10 flex justify-between items-center bg-surface-container-highest">
+<div>
 <h3 class="font-headline-md text-white">Meu Carrinho</h3>
-<button class="material-symbols-outlined text-tertiary-container" onclick="toggleCart()">close</button>
+<p class="text-xs text-on-surface-variant font-mono uppercase tracking-widest mt-1">index.html / checkout</p>
+</div>
+<button class="material-symbols-outlined text-tertiary-container hover:text-white" onclick="toggleCart()">close</button>
 </div>
 <div class="flex-1 overflow-y-auto p-6 space-y-4" id="cart-items">
 <!-- Items will be injected here -->
-<div class="text-center py-12 text-on-surface-variant" id="empty-cart-msg">
-<span class="material-symbols-outlined text-6xl mb-4 opacity-20">shopping_bag</span>
-<p>Seu carrinho está vazio.</p>
+<div class="text-center py-20 text-on-surface-variant" id="empty-cart-msg">
+<span class="material-symbols-outlined text-7xl mb-4 opacity-10">shopping_bag</span>
+<p class="font-headline-md text-white/50">Sua sacola está vazia</p>
+<button class="mt-6 text-primary font-label-md underline underline-offset-4" onclick="toggleCart()">Explorar Cardápio</button>
 </div>
 </div>
-<div class="p-6 bg-surface-container-high border-t border-white/5 space-y-4">
+<div class="p-6 bg-surface-container-high border-t border-white/5 space-y-6">
+<div class="space-y-4">
 <div class="flex justify-between items-center">
-<span class="text-on-surface-variant font-label-md uppercase">Total</span>
+<span class="text-on-surface-variant font-label-md uppercase tracking-wider">Subtotal</span>
+<span class="text-white font-body-md" id="cart-subtotal">R$ 0,00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-label-md uppercase tracking-wider">Taxa de Entrega</span>
+<span class="text-green-400 font-label-md">GRÁTIS</span>
+</div>
+<div class="h-px bg-white/5"></div>
+<div class="flex justify-between items-center">
+<span class="text-white font-headline-md">Total</span>
 <span class="text-secondary font-headline-md" id="cart-total">R$ 0,00</span>
 </div>
-<div class="space-y-2">
-<label class="font-label-sm text-on-surface-variant block">Endereço de Entrega</label>
-<textarea class="w-full bg-surface text-white border-white/10 rounded-lg p-3 text-sm focus:border-secondary transition-colors outline-none" id="delivery-address" placeholder="Rua, número, bairro e complemento..." rows="2"></textarea>
-<p class="text-error text-xs hidden" id="address-error">Por favor, insira um endereço válido.</p>
 </div>
-<button class="w-full py-4 bg-primary text-white font-label-md rounded-lg hover:brightness-110 transition-all flex justify-center items-center gap-3" onclick="checkoutWhatsApp()">
+<div class="space-y-3"><label class="font-label-sm text-on-surface-variant block uppercase tracking-tighter">Endereço de Entrega (Obrigatório)</label><textarea class="w-full bg-surface-container-lowest text-white border border-white/10 rounded-xl p-4 text-sm focus:border-primary/50 transition-colors outline-none placeholder:text-white/20 resize-none" id="delivery-address" placeholder="Ex: Rua das Flores, 123, Apto 42, Jardins" rows="3"></textarea><p class="text-error text-[11px] hidden flex items-center gap-1" id="address-error"><span class="material-symbols-outlined text-sm">error</span> Por favor, insira o endereço completo para entrega.</p></div>
+<button class="w-full py-4 bg-primary text-on-primary font-label-md rounded-xl hover:brightness-110 active:scale-[0.98] transition-all flex justify-center items-center gap-3 shadow-lg shadow-primary/10" onclick="checkoutWhatsApp()">
 <span class="material-symbols-outlined">send</span>
-                    FINALIZAR NO WHATSAPP
-                </button>
+                FINALIZAR PEDIDO NO WHATSAPP
+            </button>
 </div>
 </div>
 </div>
@@ -284,131 +298,165 @@
 </a>
 </nav>
 <script>
-        let cart = [];
+    let cart = [];
 
-        function addToCart(name, price) {
-            const existingItem = cart.find(item => item.name === name);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({ name, price, quantity: 1 });
-            }
-            updateCart();
-            
-            // Visual feedback
-            const btn = event.currentTarget;
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<span class="material-symbols-outlined">check</span> ADICIONADO';
-            btn.classList.add('bg-green-600');
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.classList.remove('bg-green-600');
-            }, 1000);
+    function addToCart(name, price) {
+        const existingItem = cart.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({ name, price, quantity: 1 });
         }
+        updateCart();
+        
+        // Visual feedback on button
+        const btn = event.currentTarget;
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> ADICIONADO';
+        btn.classList.add('!bg-green-600', '!text-white');
+        
+        // Animation for floating badge
+        const badge = document.getElementById('cart-count-badge');
+        badge.classList.remove('scale-0');
+        badge.classList.add('scale-110');
+        setTimeout(() => badge.classList.remove('scale-110'), 200);
 
-        function updateCart() {
-            const cartItemsContainer = document.getElementById('cart-items');
-            const cartCount = document.getElementById('cart-count');
-            const cartTotal = document.getElementById('cart-total');
-            const emptyMsg = document.getElementById('empty-cart-msg');
-            
-            let totalCount = 0;
-            let totalPrice = 0;
-            
-            if (cart.length === 0) {
-                emptyMsg.style.display = 'block';
-                cartItemsContainer.innerHTML = '';
-                cartItemsContainer.appendChild(emptyMsg);
-            } else {
-                emptyMsg.style.display = 'none';
-                cartItemsContainer.innerHTML = '';
-                cart.forEach((item, index) => {
-                    totalCount += item.quantity;
-                    totalPrice += item.price * item.quantity;
-                    
-                    const itemElement = document.createElement('div');
-                    itemElement.className = 'flex justify-between items-center bg-surface p-4 rounded-xl border border-white/5';
-                    itemElement.innerHTML = `
-                        <div>
-                            <h5 class="text-white font-label-md">${item.name}</h5>
-                            <p class="text-secondary text-sm">R$ ${item.price.toFixed(2)} x ${item.quantity}</p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <button onclick="changeQty(${index}, -1)" class="material-symbols-outlined text-primary text-xl">remove_circle</button>
-                            <span class="text-white font-label-md">${item.quantity}</span>
-                            <button onclick="changeQty(${index}, 1)" class="material-symbols-outlined text-primary text-xl">add_circle</button>
-                        </div>
-                    `;
-                    cartItemsContainer.appendChild(itemElement);
-                });
-            }
-            
-            cartCount.innerText = totalCount;
-            cartTotal.innerText = `R$ ${totalPrice.toFixed(2)}`;
-        }
+        setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.classList.remove('!bg-green-600', '!text-white');
+        }, 1500);
+    }
 
-        function changeQty(index, delta) {
-            cart[index].quantity += delta;
-            if (cart[index].quantity <= 0) {
-                cart.splice(index, 1);
-            }
-            updateCart();
-        }
-
-        function toggleCart() {
-            const modal = document.getElementById('cart-modal');
-            const drawer = document.getElementById('cart-drawer');
+    function updateCart() {
+        const cartItemsContainer = document.getElementById('cart-items');
+        const badge = document.getElementById('cart-count-badge');
+        const cartSubtotal = document.getElementById('cart-subtotal');
+        const cartTotal = document.getElementById('cart-total');
+        const emptyMsg = document.getElementById('empty-cart-msg');
+        
+        let totalCount = 0;
+        let totalPrice = 0;
+        
+        if (cart.length === 0) {
+            emptyMsg.style.display = 'block';
+            cartItemsContainer.innerHTML = '';
+            cartItemsContainer.appendChild(emptyMsg);
+            badge.classList.add('scale-0');
+        } else {
+            emptyMsg.style.display = 'none';
+            cartItemsContainer.innerHTML = '';
+            badge.classList.remove('scale-0');
             
-            if (modal.classList.contains('invisible')) {
-                modal.classList.remove('invisible', 'opacity-0');
-                drawer.style.transform = 'translateX(0)';
-            } else {
-                modal.classList.add('opacity-0');
-                drawer.style.transform = 'translateX(100%)';
-                setTimeout(() => modal.classList.add('invisible'), 300);
-            }
-        }
-
-        function checkoutWhatsApp() {
-            const address = document.getElementById('delivery-address').value.trim();
-            const error = document.getElementById('address-error');
-            
-            if (cart.length === 0) {
-                alert("O seu carrinho está vazio.");
-                return;
-            }
-
-            if (address.length < 10) {
-                error.classList.remove('hidden');
-                document.getElementById('delivery-address').focus();
-                return;
-            }
-            
-            error.classList.add('hidden');
-            
-            let message = "Olá! Gostaria de fazer um pedido:\n\n";
-            let total = 0;
-            
-            cart.forEach(item => {
-                message += `• ${item.quantity}x ${item.name} - R$ ${(item.price * item.quantity).toFixed(2)}\n`;
-                total += item.price * item.quantity;
+            cart.forEach((item, index) => {
+                totalCount += item.quantity;
+                totalPrice += item.price * item.quantity;
+                
+                const itemElement = document.createElement('div');
+                itemElement.className = 'flex justify-between items-center bg-surface-container-low p-4 rounded-xl border border-white/5 animate-in fade-in slide-in-from-right duration-300';
+                itemElement.innerHTML = `
+                    <div class="flex-1">
+                        <h5 class="text-white font-label-md">${item.name}</h5>
+                        <p class="text-secondary text-xs mt-1">R$ ${(item.price * item.quantity).toFixed(2)}</p>
+                    </div>
+                    <div class="flex items-center gap-4 bg-black/20 rounded-lg px-2 py-1">
+                        <button onclick="changeQty(${index}, -1)" class="material-symbols-outlined text-primary text-xl active:scale-75 transition-transform">remove</button>
+                        <span class="text-white font-label-md min-w-[20px] text-center">${item.quantity}</span>
+                        <button onclick="changeQty(${index}, 1)" class="material-symbols-outlined text-primary text-xl active:scale-75 transition-transform">add</button>
+                    </div>
+                    <button onclick="removeItem(${index})" class="material-symbols-outlined text-white/20 hover:text-error ml-4 transition-colors">delete</button>
+                `;
+                cartItemsContainer.appendChild(itemElement);
             });
-            
-            message += `\n*Total: R$ ${total.toFixed(2)}*`;
-            message += `\n\n*Endereço para entrega:*\n${address}`;
-            
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/5511999999999?text=${encodedMessage}`, '_blank');
+        }
+        
+        badge.innerText = totalCount;
+        cartSubtotal.innerText = `R$ ${totalPrice.toFixed(2)}`;
+        cartTotal.innerText = `R$ ${totalPrice.toFixed(2)}`;
+    }
+
+    function changeQty(index, delta) {
+        cart[index].quantity += delta;
+        if (cart[index].quantity <= 0) {
+            cart.splice(index, 1);
+        }
+        updateCart();
+    }
+
+    function removeItem(index) {
+        cart.splice(index, 1);
+        updateCart();
+    }
+
+    function toggleCart() {
+        const modal = document.getElementById('cart-modal');
+        const drawer = document.getElementById('cart-drawer');
+        
+        if (modal.classList.contains('invisible')) {
+            modal.classList.remove('invisible', 'opacity-0');
+            modal.classList.add('pointer-events-auto');
+            drawer.style.transform = 'translateX(0)';
+            document.body.style.overflow = 'hidden';
+        } else {
+            modal.classList.add('opacity-0');
+            modal.classList.remove('pointer-events-auto');
+            drawer.style.transform = 'translateX(100%)';
+            document.body.style.overflow = '';
+            setTimeout(() => modal.classList.add('invisible'), 500);
+        }
+    }
+
+    function checkoutWhatsApp() {
+        const address = document.getElementById('delivery-address').value.trim();
+        const error = document.getElementById('address-error');
+        const textarea = document.getElementById('delivery-address');
+        
+        if (cart.length === 0) {
+            alert("O seu carrinho está vazio. Adicione pelo menos uma pizza!");
+            return;
         }
 
-        // Header transparency scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('bg-surface/95', 'shadow-2xl');
-            } else {
-                header.classList.remove('bg-surface/95', 'shadow-2xl');
-            }
+        if (address.length < 15) {
+            error.classList.remove('hidden');
+            textarea.classList.add('border-error');
+            textarea.focus();
+            return;
+        }
+        
+        error.classList.add('hidden');
+        textarea.classList.remove('border-error');
+        
+        let message = "*🍕 NOVO PEDIDO - PIZZA ARTIGIANALE*\n";
+        message += "━━━━━━━━━━━━━━━━━━━━━━━━\n\n";
+        message += "*📋 RESUMO DOS ITENS:*\n";
+        
+        let total = 0;
+        cart.forEach(item => {
+            const subtotal = item.price * item.quantity;
+            message += `▪️ ${item.quantity}x *${item.name}*\n`;
+            message += `   R$ ${subtotal.toFixed(2).replace('.', ',')}\n\n`;
+            total += subtotal;
         });
-    </script>
+        
+        message += "━━━━━━━━━━━━━━━━━━━━━━━━\n";
+        message += `*💰 TOTAL DO PEDIDO:* R$ ${total.toFixed(2).replace('.', ',')}\n`;
+        message += "━━━━━━━━━━━━━━━━━━━━━━━━\n\n";
+        message += `*📍 ENDEREÇO DE ENTREGA:*\n${address}\n\n`;
+        message += "━━━━━━━━━━━━━━━━━━━━━━━━\n";
+        message += "_Pedido enviado via index.html_";
+        
+        const encodedMessage = encodeURIComponent(message);
+        // Link de demonstração - substitua pelo número real da pizzaria
+        window.open(`https://wa.me/5511976794749?text=${encodedMessage}`, '_blank');
+    }
+
+    // Header transparency scroll effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('bg-surface/95', 'shadow-2xl');
+        } else {
+            header.classList.remove('bg-surface/95', 'shadow-2xl');
+        }
+    });
+</script>
 </body></html>
